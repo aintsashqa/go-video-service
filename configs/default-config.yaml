@@ -1,0 +1,12 @@
+http:
+  host: "localhost"
+  port: 8080
+  read_timeout: 10s
+  write_timeout: 10s
+  max_header_mbytes: 10
+
+minio:
+  endpoint: "localhost:9000"
+  access_key_id: "access-key-id"
+  secret_access_key: "secret-access-key"
+  enable_ssl: false
