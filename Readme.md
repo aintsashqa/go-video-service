@@ -37,23 +37,19 @@ minio:
 ### API documentation
 ----
 
-
 ##### Health check
-----
 * **URL**
     `/health-check`
 * **Method**
     `GET`
-* **Success Response**
-    *Status:* 204 (No Content)
+* **Success response** <br />
+    *Status:* 204 (No Content) <br />
     *Headers:*
     ```http
     Content-Type: application/json
     ```
 
-
 ##### Upload video
-----
 * **URL**
     `/api/video`
 * **Method**
@@ -62,10 +58,10 @@ minio:
     ```http
     X-Original-Name: filename.extension
     ```
-* **Data params**
+* **Data params** <br />
     Required: `binary`
-* **Success response**
-    *Status:* 201 (Created)
+* **Success response** <br />
+    *Status:* 201 (Created) <br />
     *Headers:*
     ```http
     Content-Type: application/json
@@ -90,8 +86,8 @@ minio:
        ]
     }
     ```
-* **Error response**
-  * *Status:* 400 (Bad Request)
+* **Error response** <br />
+  * *Status:* 400 (Bad Request) <br />
     *Headers:*
     ```http
     Content-Type: application/json
@@ -103,7 +99,7 @@ minio:
     }
     ```
   OR
-  * *Status:* 500 (Internal Server Error)
+  * *Status:* 500 (Internal Server Error) <br />
     *Headers:*
     ```http
     Content-Type: application/json
@@ -117,15 +113,14 @@ minio:
 
 
 ##### Find video
-----
 * **URL**
     `/api/video/:uuid`
 * **Method**
     `GET`
-* **URL params**
+* **URL params** <br />
     Required: `uuid=[Version 4 UUID]`
-* **Success response**
-    *Status:* 200 (OK)
+* **Success response** <br />
+    *Status:* 200 (OK) <br />
     *Headers:*
     ```http
     Content-Type: application/json
@@ -150,8 +145,8 @@ minio:
        ]
     }
     ```
-* **Error response**
-  * *Status:* 400 (Bad Request)
+* **Error response** <br />
+  * *Status:* 400 (Bad Request) <br />
     *Headers:*
     ```http
     Content-Type: application/json
@@ -163,7 +158,7 @@ minio:
     }
     ```
   OR
-  * *Status:* 404 (Not Found)
+  * *Status:* 404 (Not Found) <br />
     *Headers:*
     ```http
     Content-Type: application/json
@@ -175,7 +170,7 @@ minio:
     }
     ```
   OR
-  * *Status:* 500 (Internal Server Error)
+  * *Status:* 500 (Internal Server Error) <br />
     *Headers:*
     ```http
     Content-Type: application/json
@@ -189,7 +184,6 @@ minio:
 
 
 ##### Stream video
-----
 * **URL**
     `/api/video/:uuid/stream`
 * **Method**
@@ -198,10 +192,10 @@ minio:
     ```http
     Range: bytes=0-
     ```
-* **URL params**
+* **URL params** <br />
     Required: `uuid=[Version 4 UUID]`
-* **Success response**
-  * *Status:* 206 (Partial Content)
+* **Success response** <br />
+  * *Status:* 206 (Partial Content) <br />
     *Headers:*
     ```http
     Accept-Ranges: bytes
@@ -209,9 +203,9 @@ minio:
     Content-Range: bytes 0-1048576/2097152
     Content-Length: 1048576
     ```
-    *Content:* `bytes`
+    *Content:* `bytes` <br />
   THEN
-  * *Status:* 200 (OK)
+  * *Status:* 200 (OK) <br />
     *Headers:*
     ```http
     Accept-Ranges: bytes
@@ -220,8 +214,8 @@ minio:
     Content-Length: 0
     ```
     *Content:* `bytes`
-* **Error response**
-  * *Status:* 400 (Bad Request)
+* **Error response** <br />
+  * *Status:* 400 (Bad Request) <br />
     *Headers:*
     ```http
     Content-Type: application/json
@@ -233,7 +227,7 @@ minio:
     }
     ```
   OR
-  * *Status:* 404 (Not Found)
+  * *Status:* 404 (Not Found) <br />
     *Headers:*
     ```http
     Content-Type: application/json
@@ -245,7 +239,7 @@ minio:
     }
     ```
   OR
-  * *Status:* 500 (Internal Server Error)
+  * *Status:* 500 (Internal Server Error) <br />
     *Headers:*
     ```http
     Content-Type: application/json
@@ -259,33 +253,20 @@ minio:
 
 
 ##### Remove video
-----
 * **URL**
     `/api/video/:uuid`
 * **Method**
     `DELETE`
-* **URL params**
+* **URL params** <br />
     Required: `uuid=[Version 4 UUID]`
-* **Success response**
-    *Status:* 204 (No Content)
+* **Success response** <br />
+    *Status:* 204 (No Content) <br />
     *Headers:*
     ```http
     Content-Type: application/json
     ```
-* **Error response**
-  * *Status:* 400 (Bad Request)
-    *Headers:*
-    ```http
-    Content-Type: application/json
-    ```
-    *Content:*
-    ```json
-    {
-        "message": ""
-    }
-    ```
-  OR
-  * *Status:* 404 (Not Found)
+* **Error response** <br />
+  * *Status:* 400 (Bad Request) <br />
     *Headers:*
     ```http
     Content-Type: application/json
@@ -297,7 +278,19 @@ minio:
     }
     ```
   OR
-  * *Status:* 500 (Internal Server Error)
+  * *Status:* 404 (Not Found) <br />
+    *Headers:*
+    ```http
+    Content-Type: application/json
+    ```
+    *Content:*
+    ```json
+    {
+        "message": ""
+    }
+    ```
+  OR
+  * *Status:* 500 (Internal Server Error) <br />
     *Headers:*
     ```http
     Content-Type: application/json
