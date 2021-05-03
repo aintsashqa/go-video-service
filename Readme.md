@@ -34,10 +34,10 @@ minio:
   enable_ssl:  false
 ```
 
-### API documentation
+## API documentation
 ----
 
-##### Health check
+#### **Health check**
 * **URL**
     `/health-check`
 * **Method**
@@ -49,7 +49,7 @@ minio:
     Content-Type: application/json
     ```
 
-##### Upload video
+#### **Upload video**
 * **URL**
     `/api/video`
 * **Method**
@@ -112,7 +112,7 @@ minio:
     ```
 
 
-##### Find video
+#### **Find video**
 * **URL**
     `/api/video/:uuid`
 * **Method**
@@ -183,7 +183,7 @@ minio:
     ```
 
 
-##### Stream video
+#### **Stream video**
 * **URL**
     `/api/video/:uuid/stream`
 * **Method**
@@ -252,7 +252,7 @@ minio:
     ```
 
 
-##### Remove video
+#### **Remove video**
 * **URL**
     `/api/video/:uuid`
 * **Method**
