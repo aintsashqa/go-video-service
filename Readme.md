@@ -37,6 +37,7 @@ minio:
 ### API documentation
 ----
 
+
 ##### Health check
 ----
 * **URL**
@@ -49,6 +50,7 @@ minio:
     ```http
     Content-Type: application/json
     ```
+
 
 ##### Upload video
 ----
@@ -112,6 +114,7 @@ minio:
         "message": ""
     }
     ```
+
 
 ##### Find video
 ----
@@ -184,6 +187,7 @@ minio:
     }
     ```
 
+
 ##### Stream video
 ----
 * **URL**
@@ -252,6 +256,7 @@ minio:
         "message": ""
     }
     ```
+
 
 ##### Remove video
 ----
